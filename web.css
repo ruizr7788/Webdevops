@@ -11,15 +11,15 @@
   src: url(/nunitofonts/nunito-lightitalic-webfont.woff) format("Woff");
   src: url(/nunitofonts/nunito-semibolditalic-webfont.woff2);
 }
-::root {
+:root {
   --main-color: #90cbf9;
   --secondary-color: #869edc;
   --pink: #dfa9d6;
   --second-pink: #f7c6d2;
   --yellow: #f7f3d6;
   --second-yellow: #fddccb;
-  --transition: all 0.3s ease;
   --fade: all 0.3s ease;
+  --thinBorder: 1px solid black;
 }
 
 * {
@@ -38,16 +38,56 @@ body {
 /* ---------------left side of landing page------------------ */
 #left {
   position: relative;
-  border-right: 1px solid black;
+  /* border-right: 1px solid black; */
+  background-color: var(--secondary-color);
 }
 #left h1 {
+  color: var(--yellow);
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: normal;
   padding: 2px;
+  font-size: 50px;
+  border-bottom: 1px solid black;
+  border-width: 3px;
 }
+
+/* quick links (available on every section) */
+.quick-links {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translateX(-40%);
+  font-size: 22px;
+}
+
+.quick-links ul {
+  list-style: none;
+  line-height: 2em;
+}
+.quick-link {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: var(--fade);
+}
+.quick-link:hover {
+  opacity: 100;
+  transition: var(--fade);
+}
+.quick-links ul li {
+  transition: var(--fade);
+}
+.quick-links ul li:hover {
+  transform: scale(1.2);
+  transition: var(--fade);
+}
+.quick-links ul li:nth-child(even) {
+  padding-left: 15px;
+}
+
 /* -----------------right side of landing page------------------ */
 /* navbar */
 #navbar ul {
@@ -64,18 +104,18 @@ body {
 #navbar ul li {
   list-style: none;
   font-weight: bold;
-  transition: all 0.8s ease;
+  transition: var(--fade);
 }
 #navbar .contact-us {
   padding: 10px 16px;
-  background: #90cbf9;
+  background: var(--main-color);
   cursor: inherit;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: var(--fade);
 }
 #navbar .contact-us:hover {
   background-color: #77baee;
-  transition: all 0.3s ease;
+  transition: var(--fade);
 }
 
 /* landing hook */
@@ -86,18 +126,40 @@ body {
   max-width: 500px;
   width: 100%;
   position: absolute;
-  top: 35%;
+  top: 20%;
   left: 10%;
   transform: translateX(-10%);
   line-height: 2em;
 }
 /* landing page image */
 #landing_img {
-  width: 800px;
+  width: 750px;
   position: absolute;
   bottom: 0;
   right: 2em;
 }
+
+/* landing page buttons */
+#landing_btns {
+  margin-top: 1em;
+}
+#landing_btns .btn-dark {
+  margin-right: 1em;
+}
+/* newsletters */
+#weekly_newsletters {
+  line-height: 2em;
+  max-width: 600px;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translateX(-70%);
+}
+#weekly_newsletters button {
+  margin-top: 1.5em;
+}
+
+/* ---------------Second Page Styling---------------- */
 
 /* ------------collective styling------------- */
 .btn {
@@ -111,13 +173,38 @@ body {
   text-decoration: none;
 }
 #navbar ul li:hover {
-  transform: scale(0.92);
-  transition: all 0.8s ease;
+  transform: scale(0.9);
+  transition: var(--fade);
 }
 .responsive {
   max-width: 800px;
   width: 100%;
   height: auto;
+}
+.btn-dark {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1em 2em;
+  transition: var(--fade);
+  font-weight: bold;
+  border: var(--thinBorder);
+}
+.btn-dark:hover {
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+  transform: scale(0.95);
+}
+.btn-light {
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 1em 2em;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+.btn-light:hover {
+  /* background-color: var(--main-color); */
+  transition: all 0.3s ease;
+  transform: scale(0.95);
 }
 
 /* -------------Media queries------------- */
@@ -129,11 +216,47 @@ body {
 }
 @media only screen and (min-width: 850px) and (max-width: 970px) {
   #landing_img {
-    width: 600px;
+    width: 550px;
   }
 }
 @media only screen and (min-width: 400px) and (max-width: 850px) {
   #landing_img {
     width: 400px;
+  }
+  #left {
+    opacity: 0;
+    width: 0;
+    grid-template-columns: 1fr;
+  }
+  #right {
+    padding-left: 10em;
+  }
+  #navbar ul {
+    position: absolute;
+    left: -5em;
+    padding: 1em;
+  }
+  #navbar ul li {
+    margin-right: 15px;
+  }
+  #landing_hook {
+    top: 20%;
+    left: -10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #navbar ul li:nth-child(odd) {
+    display: none;
+  }
+  #navbar ul li {
+    margin-right: 5px;
+  }
+  #landing_btns button {
+    margin: 5px;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .extension {
+    display: none;
   }
 }
