@@ -15,9 +15,11 @@
           as You Know it
         </h1>
         <div class="quick-links">
-          <ul>
-            <li><a class="quick-link" href="#">Home</a></li>
-            <li><a class="quick-link" href="#">Approach</a></li>
+          <ul class="links_container">
+            <li>
+              <a class="quick-link top-link" href="#landing_page">Home</a>
+            </li>
+            <li><a class="quick-link" href="#approach">Approach</a></li>
             <li><a class="quick-link" href="#">About us</a></li>
             <li><a class="quick-link" href="#">Get Started</a></li>
             <li><a class="quick-link" href="#">Reviews</a></li>
@@ -25,11 +27,11 @@
         </div>
       </div>
       <div id="right">
-        <div id="navbar">
-          <ul>
+        <div id="navbar" class="navbar">
+          <ul class="links_container">
             <li><a href="#" class="page-link">Services</a></li>
             <li><a href="#" class="page-link">Work</a></li>
-            <li><a href="#" class="page-link">Approach</a></li>
+            <li><a href="#approach" class="page-link">Approach</a></li>
             <li><a href="#" class="page-link">Company</a></li>
             <li><a href="#" class="page-link">Resources</a></li>
             <button class="btn contact-us">Contact Us</button>
@@ -70,20 +72,31 @@
       </div>
     </div>
     <div id="approach">
-      <div id="left-approach">
+      <div id="left_approach">
         <h1>Here's Our Approach</h1>
         <div class="quick-links">
           <ul>
-            <li><a class="quick-link" href="#">Home</a></li>
-            <li><a class="quick-link" href="#">Approach</a></li>
-            <li><a class="quick-link" href="#">About us</a></li>
-            <li><a class="quick-link" href="#">Get Started</a></li>
-            <li><a class="quick-link" href="#">Reviews</a></li>
+            <li><a class="quick-link secondary-blue" href="#">Home</a></li>
+            <li><a class="quick-link secondary-blue" href="#">Approach</a></li>
+            <li><a class="quick-link secondary-blue" href="#">About us</a></li>
+            <li>
+              <a class="quick-link secondary-blue" href="#">Get Started</a>
+            </li>
+            <li><a class="quick-link secondary-blue" href="#">Reviews</a></li>
           </ul>
         </div>
       </div>
-      <div id="right-approach">
-        <h1>We do things Simple</h1>
+      <div id="right_approach">
+        <h1>Technologies We Use</h1>
+        <span
+          >Our technology stack is tested and safe, corresponding with the
+          latest trends in web development.</span
+        >
+        <div id="language_logos">
+          <div class="card">
+            <img src="/languageLogos/php.eps" alt="hello" />
+          </div>
+        </div>
         <div id="techCards"></div>
       </div>
     </div>

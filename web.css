@@ -21,7 +21,9 @@
   --fade: all 0.3s ease;
   --thinBorder: 1px solid black;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
@@ -34,6 +36,18 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 100vh;
+}
+/* ----------------fixed navbar---------------------- */
+.fixed_nav {
+  position: fixed;
+  background-color: #fff;
+  width: 75vw;
+  z-index: 1;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.164);
+}
+.fixed_nav .page-link {
+  color: #333;
+  transition: var(--fade);
 }
 /* ---------------left side of landing page------------------ */
 #left {
@@ -50,8 +64,7 @@ body {
   font-weight: normal;
   padding: 2px;
   font-size: 50px;
-  border-bottom: 1px solid black;
-  border-width: 3px;
+  border-bottom: 3px solid black;
 }
 
 /* quick links (available on every section) */
@@ -160,6 +173,41 @@ body {
 }
 
 /* ---------------Second Page Styling---------------- */
+#approach {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100vh;
+}
+#left_approach {
+  background-color: var(--yellow);
+  position: relative;
+}
+#left_approach h1 {
+  color: var(--secondary-color);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: normal;
+  padding: 2px;
+  font-size: 50px;
+  border-bottom: 3px solid black;
+}
+/* ----------second page right side styling------------------ */
+#right_approach {
+  text-align: center;
+}
+#right_approach h1 {
+  width: fit-content;
+  margin: 3em auto;
+  font-size: 35px;
+  margin-bottom: 11px;
+}
+#right_approach span {
+  font-size: 25px;
+  font-weight: normal;
+  color: #333;
+}
 
 /* ------------collective styling------------- */
 .btn {
@@ -205,6 +253,28 @@ body {
   /* background-color: var(--main-color); */
   transition: all 0.3s ease;
   transform: scale(0.95);
+}
+.secondary-blue {
+  color: var(--secondary-color);
+}
+.blue {
+  color: var(--main-color);
+}
+.pink {
+  color: var(--pink);
+}
+.secondary-pink {
+  color: var(--second-pink);
+}
+.yellow {
+  color: var(--yellow);
+}
+.secondary-yellow {
+  color: var(--second-yellow);
+}
+
+.hidden {
+  display: none;
 }
 
 /* -------------Media queries------------- */
