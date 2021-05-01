@@ -196,6 +196,7 @@ body {
 /* ----------second page right side styling------------------ */
 #right_approach {
   text-align: center;
+  background-color: #fafafa;
 }
 #right_approach h1 {
   width: fit-content;
@@ -207,6 +208,14 @@ body {
   font-size: 25px;
   font-weight: normal;
   color: #333;
+}
+#checks ul {
+  display: flex;
+  justify-content: center;
+}
+#checks ul li {
+  list-style: none;
+  margin-right: 1.5em;
 }
 
 /* ------------collective styling------------- */
@@ -277,6 +286,28 @@ body {
   display: none;
 }
 
+/* language logo *second page* styling */
+#language_logos {
+  display: grid;
+  column-gap: 2em;
+  row-gap: 2em;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 60vw;
+  margin: 6em auto;
+}
+#language_logos .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 150px;
+  width: 150px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.219);
+}
+.card_img {
+  width: 75px;
+}
+
 /* -------------Media queries------------- */
 /* landing page img */
 @media only screen and (min-width: 970px) and (max-width: 1200px) {
@@ -288,11 +319,38 @@ body {
   #landing_img {
     width: 550px;
   }
+  /* language logo fixing*/
+  #language_logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media only screen and (min-width: 400px) and (max-width: 850px) {
+  /* second page */
+  /* hiding the left bar */
+  #left_approach {
+    opacity: 0;
+    width: 0;
+  }
+  #approach {
+    box-sizing: border-box;
+  }
+  #right_approach {
+    width: 98vw;
+  }
+  .approach_text {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+  /* language logo fixing*/
+  #language_logos {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* top page */
   #landing_img {
     width: 400px;
   }
+  /* hiding left bar */
   #left {
     opacity: 0;
     width: 0;
@@ -312,6 +370,11 @@ body {
   #landing_hook {
     top: 20%;
     left: -10%;
+  }
+  /* fixing nav */
+  .fixed_nav {
+    margin-left: -10em;
+    background-color: #fff;
   }
 }
 @media only screen and (max-width: 600px) {

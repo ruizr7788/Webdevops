@@ -45,3 +45,39 @@ scrollLink.forEach((link) => {
     });
   });
 });
+
+// -----Language logos-----
+const langIMG = [
+  ["/languageLogos/php.svg"],
+  ["/languageLogos/symfony.svg"],
+  ["/languageLogos/laravel-1.svg"],
+  ["/languageLogos/rails-1.svg"],
+  ["/languageLogos/wordpress-icon.svg"],
+  ["/languageLogos/mysql-5.svg"],
+  ["/languageLogos/html5.svg"],
+  ["/languageLogos/css-5.svg"],
+  ["/languageLogos/logo-javascript.svg"],
+  ["/languageLogos/angular-3.svg"],
+  ["/languageLogos/react-2.svg"],
+  ["/languageLogos/mariadb.svg"],
+  ["/languageLogos/python-3.svg"],
+  ["/languageLogos/vue-9.svg"],
+  ["/languageLogos/docker.svg"],
+];
+
+// container where we want to add logo
+const logoCont = document.getElementById("language_logos");
+
+(function displayLangLogo() {
+  langIMG.forEach((img) => {
+    const html = `
+    <div class="card">
+        <img
+            class="card_img"
+            src="${img}"
+            alt="hello"
+        />
+    </div>`;
+    logoCont.insertAdjacentHTML("beforeend", html);
+  });
+})();
