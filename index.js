@@ -81,3 +81,49 @@ const logoCont = document.getElementById("language_logos");
     logoCont.insertAdjacentHTML("beforeend", html);
   });
 })();
+
+// -----client cards-----
+const cardContainer = document.getElementById("client_logos");
+
+const clientImgs = [
+  ["/clientLogos/coca-cola.svg"],
+  ["/clientLogos/espn.svg"],
+  ["/clientLogos/facebook-1.svg"],
+  ["/clientLogos/microsoft-windows-22.svg"],
+  ["/clientLogos/playstation-wordmark.svg"],
+  ["/clientLogos/tesla-9.svg"],
+  ["/clientLogos/amazon-2.svg"],
+  ["/clientLogos/ebay.svg"],
+];
+
+(function displayClients() {
+  clientImgs.forEach((img) => {
+    const html = `
+    <div class="client_card">
+      <img src="${img}" alt="greetings!" />
+    </div>`;
+    cardContainer.insertAdjacentHTML("beforeend", html);
+  });
+})();
+
+// map ------------------------------------
+// initialize and add map
+(function initMap() {
+  // location of Washington DC
+  const washDC = { lat: 38.9072, lng: 77.0369 };
+  // the map, centered at DC
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: washDC,
+  });
+  // Marker at Washington DC
+  const marker = new google.maps.Marker({
+    position: washDC,
+    map: map,
+  });
+})();
+
+// date ------------------------------------
+const label_date = document.getElementById("date");
+const date = new Date();
+label_date.innerHTML = date;

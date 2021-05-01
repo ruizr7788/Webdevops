@@ -21,13 +21,14 @@
               <a class="quick-link top-link" href="#landing_page">Home</a>
             </li>
             <li><a class="quick-link" href="#approach">Approach</a></li>
-            <li><a class="quick-link" href="#">About us</a></li>
+            <li><a class="quick-link" href="#about">About us</a></li>
             <li><a class="quick-link" href="#">Get Started</a></li>
             <li><a class="quick-link" href="#">Reviews</a></li>
           </ul>
         </div>
       </div>
       <div id="right">
+        <span id="date">Sat, Nov 22</span>
         <div id="navbar" class="navbar">
           <ul class="links_container">
             <li><a href="#" class="page-link">Services</a></li>
@@ -77,9 +78,15 @@
         <h1>Here's Our Approach</h1>
         <div class="quick-links">
           <ul>
-            <li><a class="quick-link secondary-blue" href="#">Home</a></li>
-            <li><a class="quick-link secondary-blue" href="#">Approach</a></li>
-            <li><a class="quick-link secondary-blue" href="#">About us</a></li>
+            <li>
+              <a class="quick-link secondary-blue" href="#landing_page">Home</a>
+            </li>
+            <li>
+              <a class="quick-link secondary-blue" href="#approach">Approach</a>
+            </li>
+            <li>
+              <a class="quick-link secondary-blue" href="#about">About us</a>
+            </li>
             <li>
               <a class="quick-link secondary-blue" href="#">Get Started</a>
             </li>
@@ -115,6 +122,69 @@
         </div>
       </div>
     </div>
-    <script src="/development.js"></script>
+    <div id="about">
+      <div id="left_about">
+        <h1>Get To Know Us</h1>
+        <div class="quick-links">
+          <ul class="links_container">
+            <li>
+              <a class="quick-link top-link" href="#landing_page">Home</a>
+            </li>
+            <li><a class="quick-link" href="#approach">Approach</a></li>
+            <li><a class="quick-link" href="#about">About us</a></li>
+            <li><a class="quick-link" href="#">Get Started</a></li>
+            <li><a class="quick-link" href="#">Reviews</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="right_about">
+        <div id="about_us_info">
+          <span id="located_info" class="about_info">
+            <h1>Located</h1>
+            <p>
+              Our Headquarters is in Washington, D.C, but we are located all
+              over the United States to make working with you easier. We also
+              plan on going over seas in the next coming year!
+            </p>
+            <div id="map"></div>
+            <div id="locations">
+              <small>Seattle, Washington</small>
+              <small>Los Angeles, California</small>
+              <small>Sioux Falls, South Dakota</small>
+              <small>Houston, Texas</small>
+              <small>New York</small>
+            </div>
+          </span>
+          <span id="client_logos" class="about_info">
+            <h1>Clients</h1>
+            <p>
+              As Web Development company we are proud to serve you. Doubting us?
+              Take a look at some of the Top Tier companies we have partnered
+              with to bring quality work.
+            </p>
+            <!-- <div class="client_card">
+              <img src="" alt="greetings!" />
+            </div> -->
+            <small id="contact_us_clients_page"
+              ><span><a class="contact_link" href="#">Contact Us</a></span> to
+              get started on Your Project today!</small
+            >
+          </span>
+          <span id="about_us_development">
+            <h1>Development</h1>
+            <p>
+              We use a wide variety of technologies to deliver performance,
+              quality, and reliability. Our passion at WebDevops is to bring
+              satisfaction to our clients.
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd89L9ZNq5k5-TpfYtHPdgl-q0dLq__P8&callback=initMap"
+    ></script>
+    <script src="/index.js"></script>
   </body>
 </html>
