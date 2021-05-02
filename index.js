@@ -4,10 +4,6 @@ const navbar = document.querySelector(".navbar");
 const linksContainer = document.querySelector(".links_container");
 const topLink = document.querySelector(".top-link");
 
-// // date
-// const date = document.getElementById("date");
-// date.innerHTML = new Date().getFullYear();
-
 // fixed navbar
 window.addEventListener("scroll", () => {
   const scrollHeight = window.pageYOffset;
@@ -123,7 +119,7 @@ const clientImgs = [
   });
 })();
 
-// date ------------------------------------
-const label_date = document.getElementById("date");
-const date = new Date();
-label_date.innerHTML = date;
+// // date ------------------------------------
+// const label_date = document.getElementById("date");
+// const date = new Date();
+// label_date.innerHTML = date;

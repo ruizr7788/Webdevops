@@ -45,8 +45,9 @@ body {
 .fixed_nav {
   position: fixed;
   background-color: #fff;
-  width: 75vw;
+  width: 80vw;
   z-index: 1;
+  padding: 0 1em;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.164);
 }
 .fixed_nav .page-link {
@@ -285,7 +286,7 @@ body {
   line-height: 2em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 300px;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   column-gap: 5em;
@@ -293,9 +294,16 @@ body {
 }
 #client_logos img {
   width: 70px;
+  height: 70px;
 }
 .client_card {
   margin-top: -100px;
+  transition: var(--fade);
+  cursor: pointer;
+}
+.client_card:hover {
+  transform: scale(1.2);
+  transition: var(--fade);
 }
 #contact_us_clients_page {
   position: absolute;
@@ -304,6 +312,16 @@ body {
 /* -----About us development styles----- */
 #about_us_development {
   line-height: 2em;
+  max-width: 450px;
+}
+#about_us_img {
+  margin-top: 3em;
+  width: 400px;
+  height: 500px;
+}
+#about_career a {
+  color: var(--light-purple);
+  text-decoration: none;
 }
 
 /* ------------collective styling------------- */
@@ -314,7 +332,7 @@ body {
 /* date */
 #date {
   position: absolute;
-  top: 1em;
+  top: 1.4em;
   left: 3em;
 }
 .btn {
@@ -391,17 +409,54 @@ body {
 
 /* -------------Media queries------------- */
 /* landing page img */
-@media only screen and (min-width: 970px) and (max-width: 1200px) {
+@media only screen and (min-width: 970px) and (max-width: 1400px) {
   /* third page */
-  /* hiding time */
-  #date {
-    display: none;
+  #about_us_info {
+    grid-template-columns: 2fr;
+  }
+  #client_logos {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 7em;
+    column-gap: 0;
+    max-width: 700px;
+    margin-top: 2em;
+    text-align: center;
+  }
+  #contact_us_clients_page {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #about_us_development {
+    max-width: 700px;
+    margin: auto;
   }
   #landing_img {
     width: 700px;
   }
 }
 @media only screen and (min-width: 850px) and (max-width: 970px) {
+  /* third page */
+  #about_us_info {
+    grid-template-columns: 2fr;
+  }
+  #client_logos {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 7em;
+    column-gap: 0;
+    max-width: 650px;
+    margin-top: 2em;
+    text-align: center;
+  }
+  #contact_us_clients_page {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #about_us_development {
+    max-width: 700px;
+    margin: auto;
+  }
   #landing_img {
     width: 550px;
   }
@@ -409,9 +464,45 @@ body {
   #language_logos {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* about us grid responsiveness */
+  #about_us_info {
+    grid-template-columns: 2fr;
+  }
 }
 @media only screen and (min-width: 400px) and (max-width: 850px) {
   /* third page */
+  #about {
+    position: relative;
+  }
+  #left_about {
+    width: 0;
+    opacity: 0;
+    display: none;
+  }
+  #right_about {
+    position: absolute;
+  }
+  #about_us_info {
+    grid-template-columns: 2fr;
+  }
+  #client_logos {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 7em;
+    column-gap: 0;
+    max-width: 650px;
+    margin-top: 2em;
+    text-align: center;
+  }
+  #contact_us_clients_page {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #about_us_development {
+    max-width: 700px;
+    margin: auto;
+  }
+
   /* second page */
   /* hiding the left bar */
   #left_approach {
@@ -461,15 +552,10 @@ body {
   /* fixing nav */
   .fixed_nav {
     margin-left: -10em;
-    background-color: #fff;
   }
 }
 @media only screen and (max-width: 600px) {
   /* third page */
-  /* hiding time */
-  #date {
-    display: none;
-  }
   #navbar ul li:nth-child(odd) {
     display: none;
   }
