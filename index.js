@@ -123,3 +123,23 @@ const clientImgs = [
 // const label_date = document.getElementById("date");
 // const date = new Date();
 // label_date.innerHTML = date;
+
+// scroll animation for language logos
+const languageCards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", checkLangCard);
+
+checkLangCard();
+function checkLangCard() {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+
+  languageCards.forEach((card) => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if (cardTop < triggerBottom) {
+      card.classList.add("show");
+    } else {
+      card.classList.remove("show");
+    }
+  });
+}
